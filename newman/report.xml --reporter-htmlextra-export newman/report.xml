@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Newman" tests="3" time="1.616">
+  <testsuite name="Fullpath" id="b7437037-41c6-40b4-922f-38b1ea845f8e" timestamp="2021-03-25T17:02:39.670Z" tests="1" failures="0" errors="0" time="1.066">
+    <testcase name="Status code is 200" time="1.066" classname="Newman"/>
+  </testsuite>
+  <testsuite name="Env variable" id="ba0836d1-b316-4c76-896b-a06e806947ba" timestamp="2021-03-25T17:02:39.670Z" tests="1" failures="0" errors="0" time="0.274">
+    <testcase name="Status code is 200" time="0.274" classname="Newman"/>
+  </testsuite>
+  <testsuite name="Chai assertion over JSON Copy" id="b3e0d006-609c-4962-b4c4-beeabeb2531e" timestamp="2021-03-25T17:02:39.670Z" tests="2" failures="0" errors="0" time="0.276">
+    <testcase name="'a' property examples and other Chai assertions" time="0.276" classname="Newman"/>
+    <testcase name="String length should be above 3" time="0.276" classname="Newman"/>
+  </testsuite>
+</testsuites>

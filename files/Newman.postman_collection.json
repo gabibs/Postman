@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "8aa02f11-ed83-4590-af32-e4bacdfd4a1e",
+		"name": "Newman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Fullpath",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://postman-echo.com/get",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Env variable",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-echo}}/get",
+					"host": [
+						"{{url-echo}}"
+					],
+					"path": [
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chai assertion over JSON Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"'a' property examples and other Chai assertions\", function () {\r",
+							"    pm.expect(jsonData.json.nombre).to.be.a('string');\r",
+							"    pm.expect(jsonData.json.nombre).to.not.be.a('number');\r",
+							"    pm.expect(jsonData).to.have.a.property('args');\r",
+							"    pm.expect(jsonData.json.nombre).to.include('Ga');\r",
+							"    pm.expect(true).to.be.true;\r",
+							"    pm.expect(jsonData.args).to.be.empty;\r",
+							"});\r",
+							"pm.test(\"String length should be above 3\", function () {\r",
+							"    pm.expect(jsonData.json.nombre).to.have.lengthOf.above(3); //not recomended\r",
+							"     pm.expect(jsonData.json.nombre).to.have.lengthOf(8);//recomended\r",
+							"     pm.expect(jsonData.json.nombre).to.have.lengthOf.within(1, 20)//within a given range\r",
+							"     pm.expect(jsonData.json.nombre).to.match(/^Gabr/); //Circunflex marks start of string\r",
+							"     pm.expect(jsonData.json.edad).to.be.closeTo(47, 5); //second parameter is delta value (47 +/- 5)\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"0002\",\r\n    \"nombre\" : \"Gabriela\",\r\n    \"apellido\": \"Bettaglio\",\r\n    \"edad\" : 51,\r\n    \"isActive\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postman-echo.com/post",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
