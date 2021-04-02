@@ -1,0 +1,69 @@
+{
+	"id": "50853594-dac5-4b30-83d2-1cff5ca153a9",
+	"values": [
+		{
+			"key": "url-echo-global",
+			"value": "https://postman-echo.com",
+			"enabled": true
+		},
+		{
+			"key": "edadGlobal",
+			"value": 42,
+			"enabled": true
+		},
+		{
+			"key": "edadaleatoria",
+			"value": 65,
+			"enabled": true
+		},
+		{
+			"key": "passwordaleatoria",
+			"value": "1rpb1",
+			"enabled": true
+		},
+		{
+			"key": "ip",
+			"value": "181.169.232.245",
+			"enabled": true
+		},
+		{
+			"key": "publishYear",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "timestamp1",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "username",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "password",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "echo_digest_realm",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "echo_digest_nonce",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "apikey",
+			"value": "",
+			"enabled": true
+		}
+	],
+	"name": "My Workspace Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2021-03-26T17:26:10.190Z",
+	"_postman_exported_using": "Postman/8.0.9-210325-1217"
+}
